@@ -1,5 +1,11 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  
+  #CHANGED - Devise Action Mailer
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  
+  #CHANGED - Reload the server every time you hit save
+  config.reload_classes_only_on_change = false
 
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
