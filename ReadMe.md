@@ -158,36 +158,6 @@ Devise also offers "modules" for additional stuff such as: ```:database_authenti
 - Expire Session
 
 
-**User Tables**
-
-Devise provides an out-of-the-box user table that makes sense.  Here's what the object looks like:
-
-User Model
-```language-javascript
-{
-	id: "000000",
-	email: "character varying",
-	"encrypted_password": "character varying",
-	"sign_in_count": "integer",
-	"current_sign_in_at": "timestamp UTC",
-	"created_at": "timestamp UTC",
-	"updated_at": "timestamp UTC"
-}
-```
-
-
-Publications Model
-```language-bash
-{
-	"id": "0000",
-	"title": "string",
-	"file_url": "string",
-	"description": "string",
-	"created_at": "timestamp",
-	"updated_at": "timestamp"
-}
-```
-
 
 ---
 
