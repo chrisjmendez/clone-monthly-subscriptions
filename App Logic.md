@@ -67,3 +67,19 @@ Create a Publications controller with index and show views
 rails generate controller publications index show
 ```
 
+## Admin Controller
+
+```
+rails g controller Admin
+```
+
+rails generate controller <namespace>/<class name>
+```
+rails generate controller admin/publications
+```
+
+If you mess up and you need to re-build the controller, try something like this
+```
+rails generate controller admin/publications index publication_params find_publication destroy update edit show new create --migration=false --skip -f
+```
+

@@ -44,10 +44,21 @@ group :development, :test do
   gem 'guard'
   gem 'rb-fsevent'
   gem 'guard-concat'
+  gem 'guard-uglify'
+
+  
   # I prefer rerun over livereload
   # gem 'guard-livereload', '~> 2.5', require: false
   gem 'rerun'
-  gem 'guard-uglify'
+
+
+  # Populate your dev database with fake data
+  # Source:  http://railscasts.com/episodes/126-populating-a-database
+  # File:    ./lib/tasks/populate.rake
+  # Execute: rake db:populate
+  gem 'populator'
+  gem 'faker'
+  
 end
 
 group :development do

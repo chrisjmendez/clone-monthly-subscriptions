@@ -1,4 +1,76 @@
 Rails.application.routes.draw do
+  namespace :admin do
+  get 'publications/index'
+  end
+
+  namespace :admin do
+  get 'publications/publication_params'
+  end
+
+  namespace :admin do
+  get 'publications/find_publication'
+  end
+
+  namespace :admin do
+  get 'publications/destroy'
+  end
+
+  namespace :admin do
+  get 'publications/update'
+  end
+
+  namespace :admin do
+  get 'publications/edit'
+  end
+
+  namespace :admin do
+  get 'publications/show'
+  end
+
+  namespace :admin do
+  get 'publications/new'
+  end
+
+  namespace :admin do
+  get 'publications/create'
+  end
+
+  namespace :admin do
+  get 'publications/index'
+  end
+
+  namespace :admin do
+  get 'publications/publication_params'
+  end
+
+  namespace :admin do
+  get 'publications/find_publication'
+  end
+
+  namespace :admin do
+  get 'publications/destroy'
+  end
+
+  namespace :admin do
+  get 'publications/update'
+  end
+
+  namespace :admin do
+  get 'publications/edit'
+  end
+
+  namespace :admin do
+  get 'publications/show'
+  end
+
+  namespace :admin do
+  get 'publications/new'
+  end
+
+  namespace :admin do
+  get 'publications/create'
+  end
+
   get 'publications/index'
 
   get 'publications/show'
@@ -15,6 +87,11 @@ Rails.application.routes.draw do
   # /publications 
   # This will only be acessible for read only
   resources :publications, only: [:index, :show]
+  
+  # /admin/publications
+  namespace :admin do
+    resources :publications
+  end
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'

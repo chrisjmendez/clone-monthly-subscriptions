@@ -77,6 +77,11 @@ Update Database
 rake db:migrate
 ```
 
+# Creating Admin and Subscriber Views (through Devise)
+```
+rails g migration add_is_admin_to_users is_admin:boolean
+```
+
 
 ### Configure Devise
 

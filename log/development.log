@@ -1314,3 +1314,209 @@ WHERE fk.referenced_column_name is not null
   AND fk.table_name = 'users'
 [0m
   [1m[35m (0.1ms)[0m  SHOW CREATE TABLE `users`
+
+
+Started GET "/admin/publications" for 127.0.0.1 at 2016-05-05 18:27:24 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+
+ActionController::RoutingError (No route matches [GET] "/admin/publications"):
+  actionpack (4.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.6) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.6) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.6) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.6) lib/rails/engine.rb:518:in `call'
+  railties (4.2.6) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/ttrojan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+  /Users/ttrojan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+  /Users/ttrojan/.rvm/rubies/ruby-2.3.0/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+
+
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.6ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.2ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.1ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (114.0ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (94.3ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (169.2ms)
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `publications`[0m
+  [1m[35mPublication Last ID (0.2ms)[0m  SELECT id FROM `publications` ORDER BY id DESC
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM `publications`[0m
+  [1m[35mPublication Last ID (0.2ms)[0m  SELECT id FROM `publications` ORDER BY id DESC
+  [1m[36mPublication Populate (0.8ms)[0m  [1mINSERT INTO `publications` (`id`, `title`, `description`, `file_url`, `created_at`, `updated_at`) VALUES (1, 'Endless Night', 'Gentrify deep v austin +1 cold-pressed.', 'http://ward.net/mathias_kaulke', '2016-05-06 01:43:14.899677', '2016-05-06 01:43:14.899679'), (2, 'The Needle\'s Eye', 'Crucifix pop-up authentic kinfolk umami.', 'http://torphy.info/haylee', '2016-05-06 01:43:15.327922', '2016-05-06 01:43:15.327924'), (3, 'The Mermaids Singing', 'Readymade franzen diy.', 'http://crooksbradtke.org/savanna_padberg', '2016-05-06 01:43:15.328241', '2016-05-06 01:43:15.328243'), (4, 'The Parliament of Man', 'Celiac direct trade gentrify tilde.', 'http://raukeeling.name/mariela', '2016-05-06 01:43:15.328595', '2016-05-06 01:43:15.328596'), (5, 'Cover Her Face', 'Pork belly occupy semiotics brunch ethical distillery.', 'http://kerluke.io/juliet.hoppe', '2016-05-06 01:43:15.328887', '2016-05-06 01:43:15.328889'), (6, 'A Summer Bird-Cage', 'Echo aesthetic craft beer.', 'http://jenkins.com/serenity.waters', '2016-05-06 01:43:15.329258', '2016-05-06 01:43:15.329260'), (7, 'For a Breath I Tarry', 'Helvetica knausgaard dreamcatcher freegan ramps.', 'http://donnelly.org/alexzander', '2016-05-06 01:43:15.329578', '2016-05-06 01:43:15.329580'), (8, 'Terrible Swift Sword', 'Yolo gentrify tofu wes anderson hella.', 'http://ziemann.co/jace.klocko', '2016-05-06 01:43:15.329942', '2016-05-06 01:43:15.329943'), (9, 'Fame Is the Spur', 'Meh letterpress single-origin coffee gentrify master intelligentsia hoodie.', 'http://cremin.io/kristian_hansen', '2016-05-06 01:43:15.330274', '2016-05-06 01:43:15.330275'), (10, 'The Millstone', 'Art party vegan chia blue bottle cliche pitchfork bicycle rights flannel.', 'http://metzstroman.io/odell', '2016-05-06 01:43:15.330635', '2016-05-06 01:43:15.330637')[0m
+
+
+Started GET "/publications" for ::1 at 2016-05-05 18:45:20 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicationsController#index as HTML
+  [1m[35mPublication Load (0.4ms)[0m  SELECT `publications`.* FROM `publications`
+  Rendered publications/index.html.erb within layouts/application (12.3ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (No route matches {:action=>"show", :controller=>"publications"} missing required keys: [:id]):
+    4: 	<h2><%= publication.title -%></h2>
+    5: 	<p><%= publication.description -%></p>
+    6: 	<p><%= publication.file_url -%></p>
+    7: 	<%= link_to "View more details", publication_path, class: "btn btn-default" %>
+    8: <% end %>
+  app/views/publications/index.html.erb:7:in `block in _app_views_publications_index_html_erb___3188359648947546983_70319411940480'
+  app/views/publications/index.html.erb:3:in `_app_views_publications_index_html_erb___3188359648947546983_70319411940480'
+
+
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.2ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/actionpack-4.2.6/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (68.2ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (480.3ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/ttrojan/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (545.6ms)
+
+
+Started GET "/publications" for ::1 at 2016-05-05 18:46:44 -0700
+Processing by PublicationsController#index as HTML
+  [1m[36mPublication Load (0.3ms)[0m  [1mSELECT `publications`.* FROM `publications`[0m
+  Rendered publications/index.html.erb within layouts/application (7.1ms)
+  Rendered application/_nav.html.erb (4.8ms)
+Completed 200 OK in 417ms (Views: 414.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/publications.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-05 18:46:45 -0700
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-05 18:46:45 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 18:46:45 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 18:46:45 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-05 18:46:45 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 18:46:45 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-05 18:46:45 -0700
+
+
+Started GET "/assets/publications.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-05 18:46:45 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 18:46:45 -0700
+
+
+Started GET "/publications" for ::1 at 2016-05-05 18:47:41 -0700
+Processing by PublicationsController#index as HTML
+  [1m[35mPublication Load (0.3ms)[0m  SELECT `publications`.* FROM `publications`
+  Rendered publications/index.html.erb within layouts/application (7.1ms)
+  Rendered application/_nav.html.erb (0.5ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-05 18:47:42 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 18:47:42 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-05 18:47:42 -0700
+
+
+Started GET "/assets/publications.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-05 18:47:42 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 18:47:42 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 18:47:42 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-05 18:47:42 -0700
+
+
+Started GET "/assets/publications.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-05 18:47:42 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 18:47:42 -0700
+
+
+Started GET "/publications/3" for ::1 at 2016-05-05 18:47:44 -0700
+Processing by PublicationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPublication Load (0.3ms)[0m  [1mSELECT  `publications`.* FROM `publications` WHERE `publications`.`id` = 3 LIMIT 1[0m
+  Rendered publications/show.html.erb within layouts/application (0.4ms)
+  Rendered application/_nav.html.erb (0.5ms)
+Completed 200 OK in 43ms (Views: 22.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/publications/3" for ::1 at 2016-05-05 18:49:12 -0700
+Processing by PublicationsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPublication Load (0.2ms)[0m  SELECT  `publications`.* FROM `publications` WHERE `publications`.`id` = 3 LIMIT 1
+  Rendered publications/show.html.erb within layouts/application (0.4ms)
+  Rendered application/_nav.html.erb (0.5ms)
+Completed 200 OK in 29ms (Views: 22.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-05 18:49:13 -0700
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-05 18:49:13 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-05-05 18:49:13 -0700
+
+
+Started GET "/assets/publications.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-05 18:49:13 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-05 18:49:13 -0700
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-05 18:49:13 -0700
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-05 18:49:13 -0700
+
+
+Started GET "/assets/publications.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-05 18:49:13 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-05 18:49:13 -0700
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  `users`.* FROM `users`  ORDER BY `users`.`id` DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK

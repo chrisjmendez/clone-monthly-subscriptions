@@ -103,7 +103,7 @@
     </object>
     <object type="LMREQUEST" id="z125">
         <attribute name="uuid" type="string">4112EE4C-89AF-4C9B-B9C2-CFCFA93A3A7E</attribute>
-        <attribute name="url" type="string">/admin/publications</attribute>
+        <attribute name="url" type="string">localhost:3000/admin/publications</attribute>
         <attribute name="storecookies" type="bool">1</attribute>
         <attribute name="sendcookies" type="bool">1</attribute>
         <attribute name="redirectmethod" type="bool">0</attribute>
