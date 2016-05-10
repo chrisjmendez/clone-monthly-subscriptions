@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  id: MyString
+  href: MyString
+  title: MyString
+  artist: MyString
+  place: MyString
+  quip: MyString
+  visible: false
+
+two:
+  id: MyString
+  href: MyString
+  title: MyString
+  artist: MyString
+  place: MyString
+  quip: MyString
+  visible: false
