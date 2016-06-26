@@ -37,6 +37,7 @@ User.create([
 
 Publication.delete_all
 
+=begin
 open("https://raw.githubusercontent.com/chrisjmendez/ror-subscriptions/master/db/seed_data/publications.json") do |publications|
   data = []
   publications.read.each_line do |publication|
@@ -52,6 +53,22 @@ open("https://raw.githubusercontent.com/chrisjmendez/ror-subscriptions/master/db
   end
   Publication.create!(data)
 end
+=end
+
+open("https://raw.githubusercontent.com/chrisjmendez/ror-subscriptions/master/db/seed_data/publications.json") do |publications|
+  data = []
+  publications.read.each_line do |publication|
+    @item = JSON.parse(publication)
+      object = {
+    		"title":        @item["title"],
+    		"description":  @item["description"],
+    		"file_url":     @item["file_url"]
+      }
+      data << object
+  end
+  Publication.create!(data)
+end
+
 
 
 
