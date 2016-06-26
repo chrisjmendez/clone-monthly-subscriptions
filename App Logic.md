@@ -1,9 +1,7 @@
 # Models + Controllers
 
----
 
-
-## User
+## Users
 
 User Model
 ```language-javascript
@@ -29,6 +27,9 @@ rake db:migrate
 ```
 
 
+---
+
+
 ## Home
 
 Create a new ```Home``` controller with a view named ```index```
@@ -37,11 +38,21 @@ rails generate controller home index
 ```
 
 
+---
+
 
 ## Publications
 
-Publications Model
-```language-bash
+Here's the process:
+
+1. Create a Publication Model
+- Add Administrators
+- Build an administrator view for publications
+- Build a subscriber view for publications
+
+
+Here's what the model will look like in JSON format
+```language-json
 {
 	"id": "0000",
 	"title": "string",
@@ -66,6 +77,10 @@ Create a Publications controller with ```index``` and ```show``` views
 ```language-bash
 rails generate controller publications index show
 ```
+
+
+---
+
 
 ## Admin Controller
 ```language-bash
