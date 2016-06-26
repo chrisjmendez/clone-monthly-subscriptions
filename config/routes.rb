@@ -1,74 +1,16 @@
 Rails.application.routes.draw do
-  namespace :admin do
-  get 'publications/index'
-  end
+
 
   namespace :admin do
-  get 'publications/publication_params'
-  end
-
-  namespace :admin do
-  get 'publications/find_publication'
-  end
-
-  namespace :admin do
-  get 'publications/destroy'
-  end
-
-  namespace :admin do
-  get 'publications/update'
-  end
-
-  namespace :admin do
-  get 'publications/edit'
-  end
-
-  namespace :admin do
-  get 'publications/show'
-  end
-
-  namespace :admin do
-  get 'publications/new'
-  end
-
-  namespace :admin do
-  get 'publications/create'
-  end
-
-  namespace :admin do
-  get 'publications/index'
-  end
-
-  namespace :admin do
-  get 'publications/publication_params'
-  end
-
-  namespace :admin do
-  get 'publications/find_publication'
-  end
-
-  namespace :admin do
-  get 'publications/destroy'
-  end
-
-  namespace :admin do
-  get 'publications/update'
-  end
-
-  namespace :admin do
-  get 'publications/edit'
-  end
-
-  namespace :admin do
-  get 'publications/show'
-  end
-
-  namespace :admin do
-  get 'publications/new'
-  end
-
-  namespace :admin do
-  get 'publications/create'
+    get 'publications/index'
+    get 'publications/publication_params'
+    get 'publications/find_publication'
+    get 'publications/destroy'
+    get 'publications/update'
+    get 'publications/edit'
+    get 'publications/show'
+    get 'publications/new'
+    get 'publications/create'
   end
 
   get 'publications/index'
@@ -84,8 +26,7 @@ Rails.application.routes.draw do
   
   root to: "home#index"
   
-  # /publications 
-  # This will only be acessible for read only
+  # This is designed for our subscribers to only have read-only access to /publications
   resources :publications, only: [:index, :show]
   
   # /admin/publications
