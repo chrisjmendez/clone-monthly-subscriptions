@@ -31,7 +31,7 @@ rake db:migrate
 
 ## Home
 
-Create a new <home> controller with a view named <index>
+Create a new ```Home``` controller with a view named ```index```
 ```language-bash
 rails generate controller home index
 ```
@@ -53,7 +53,7 @@ Publications Model
 ```
 
 Create a Publications model 
-```
+```language-bash
 rails g model publication title:string description:text file_url:string
 ```
 
@@ -62,24 +62,23 @@ Update Database
 rake db:migrate
 ```
 
-Create a Publications controller with index and show views
-```
+Create a Publications controller with ```index``` and ```show``` views
+```language-bash
 rails generate controller publications index show
 ```
 
 ## Admin Controller
-
-```
+```language-bash
 rails g controller Admin
 ```
 
 rails generate controller <namespace>/<class name>
-```
+```language-bash
 rails generate controller admin/publications
 ```
 
 If you mess up and you need to re-build the controller, try something like this
-```
+```language-bash
 rails generate controller admin/publications index publication_params find_publication destroy update edit show new create --migration=false --skip -f
 ```
 
