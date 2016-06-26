@@ -6,6 +6,13 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+require 'open-uri'
+require 'json'
+
+## ################
+## Users
+## ################
+
 User.create([
   {
     email:    'a@maildrop.cc',
@@ -24,11 +31,35 @@ User.create([
   }
 ])
 
+## ################
+## Publications
+## ################
+
+Publication.delete_all
+
+open("https://raw.githubusercontent.com/chrisjmendez/ror-subscriptions/master/db/seed_data/publications.json") do |publications|
+  data = []
+  publications.read.each_line do |publication|
+    @json = JSON.parse(publication)
+    @json["publication"].each do |f|
+      object = {
+    		"title":        f["title"],
+    		"description":  f["description"],
+    		"file_url":     f["file_url"]
+      }
+      data << object
+    end
+  end
+  Publication.create!(data)
+end
+
+
+
+## ################
+## Features
+## ################
 
 Feature.delete_all
-
-require 'open-uri'
-require 'json'
 
 open("https://raw.githubusercontent.com/geotunes/geotunes/master/features.json") do |features|
   data = []
@@ -47,3 +78,4 @@ open("https://raw.githubusercontent.com/geotunes/geotunes/master/features.json")
   end
   Feature.create!(data)
 end
+
