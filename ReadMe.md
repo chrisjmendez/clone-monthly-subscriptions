@@ -11,7 +11,6 @@
 # Getting Started
 
 
-
 ## Create a New App
 
 Create new ```rails``` app with ```mysql``` as the default.
@@ -29,6 +28,13 @@ Default rails comes with Webrick but I dislike having to stop and restart my web
 rerun --dir config rails s
 ```
 
+
+## Viewing your work
+
+If you leave all the settings on default, you should be able to access your new website on: 
+```
+http://localhost:3000
+```
 
 
 ---
@@ -77,6 +83,14 @@ rails generate mycontroller new create update edit destroy index show --migratio
 ```
 
 
+## Edit Rails scaffold class to add a new field
+
+We're going to add a string column to MyModel
+```
+rails generate migration add_[my_column]_to_[mymodel] my_column:string
+rake db:migrate
+```
+
 ---
 
 
@@ -90,4 +104,8 @@ rails generate mycontroller new create update edit destroy index show --migratio
 - [Administration](): If you need a complicated user system with permissions and governance. ```Cancan```, ```pundit```, ```rolify``` are very popular. 
 
 
+- Installing a gem 
 
+```
+bundle install
+```

@@ -1,2 +1,22 @@
-<h1>Admin::Publications#show</h1>
-<p>Find me in app/views/admin/publications/show.html.erb</p>
+<h1><%= link_to "Publications", { :controller => "publications", :action => "index"} =%></h1>
+	
+
+<form class="pure-form">
+    <fieldset class="pure-group">
+		<input type="text" value="<%= @publication.title -%>" readonly>
+    </fieldset>
+
+    <fieldset class="pure-group">
+		<input type="text" value="<%= @publication.description -%>" readonly>
+    </fieldset>
+
+	<img src="<%= @publication.file_url -%>" />
+	
+</form>
+
+<%# FIXME %>
+<% if user_signed_in? %>
+<li class="pure-menu-item">
+	<%= link_to_unless_current "Publications", { controller: "publications", action: "edit" }, class: "pure-menu-link" -%>
+</li>
+<% end %>

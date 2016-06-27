@@ -4,10 +4,10 @@
 <% @publications.each do |publication| %>
 	
 	<section>
-		<h2><%= publication.title -%></h2>
+		<h2><%= link_to publication.title, publication_path(publication) -%></h2>
 		<p><%= publication.description -%></p>
-		<p><%= publication.file_url -%></p>
-		<%= link_to "View more details", publication_path(publication), class: "btn btn-default" %>		
+		<p><img src="<%= publication.file_url -%>"</p>
+		<%# link_to "View more details", publication_path(publication), class: "btn btn-default" %>		
 	</section>
 	
 <% end %>

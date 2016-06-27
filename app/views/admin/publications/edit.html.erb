@@ -1,2 +1,24 @@
-<h1>Admin::Publications#edit</h1>
-<p>Find me in app/views/admin/publications/edit.html.erb</p>
+<h1><%= @publication.title -%></h1>
+
+<%= form_for @publication, :html => { class: "pure-form pure-form-aligned" }, url: admin_publication_path(@publication) do |f| %>
+    <fieldset>
+        <div class="pure-control-group">
+			<label>Title</label>
+			<%= f.text_field :title, class: 'form-control' -%>
+        </div>
+
+        <div class="pure-control-group">
+			<label>Description</label>
+			<%= f.text_area :description, class: 'form-control' -%>
+        </div>
+
+        <div class="pure-control-group">
+			<label>Image URL</label>
+			<%= f.text_field :file_url, class: 'form-control' -%>
+        </div>
+
+        <div class="pure-control-group">
+			<%= f.submit "Update Publication", class: 'pure-button pure-button-primary' %>
+        </div>
+    </fieldset>
+<% end %>
