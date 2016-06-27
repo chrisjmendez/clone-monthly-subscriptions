@@ -1,6 +1,16 @@
 Rails.application.routes.draw do
 
+  devise_for :users
 
+  root to: "home#index"
+
+  get 'home/index'
+
+  # Subscribers
+  get 'publications/index'
+  get 'publications/show'
+  
+  # Admins
   namespace :admin do
     get 'publications/index'
     get 'publications/publication_params'
@@ -13,18 +23,8 @@ Rails.application.routes.draw do
     get 'publications/create'
   end
 
-  get 'publications/index'
-
-  get 'publications/show'
-
-  devise_for :users
-
-  get 'home/index'
-
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-  
-  root to: "home#index"
   
   # This is designed for our subscribers to only have read-only access to /publications
   resources :publications, only: [:index, :show]
