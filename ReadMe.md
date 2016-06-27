@@ -22,7 +22,7 @@ rails new <my_rails_app> --database=mysql
 
 ## Starting your Web Server using ```rerun```
 
-Default rails comes with Webrick but I prefer using a server that will restart every time I save. There are many servers to choose from but I prefer [```rerun```](https://github.com/alexch/rerun). [```livereload```](https://github.com/guard/guard-livereload) is also very popular.
+Default rails comes with Webrick but I dislike having to stop and restart my web server regularly. Instead, I use [```rerun```](https://github.com/alexch/rerun) to monitor my file edits and restart the server every time I make a change. [```livereload```](https://github.com/guard/guard-livereload) is also very popular.
 
 
 ```language-bash
