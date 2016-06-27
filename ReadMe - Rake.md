@@ -23,7 +23,7 @@ rake db:seed
 ```
 
 Double check your work
-```
+```language-bash
 
 mysql -u root ror-subscriptions_development
 
@@ -32,4 +32,5 @@ show tables;
 select * from users;
 select * from features;
 ```
+
 

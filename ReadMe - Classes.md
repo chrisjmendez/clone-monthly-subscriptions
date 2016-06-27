@@ -1,9 +1,5 @@
 # Models + Controllers
 
----
-
-
-
 
 ## User
 
@@ -30,6 +26,7 @@ Update Database
 rake db:migrate
 ```
 
+---
 
 ## Home
 
@@ -38,7 +35,7 @@ Create a new <home> controller with a view named <index>
 rails generate controller home index
 ```
 
-
+---
 
 ## Publications
 
@@ -68,6 +65,10 @@ Create a Publications controller with index and show views
 ```
 rails generate controller publications index show
 ```
+
+
+---
+
 
 ## Admin Controller
 
