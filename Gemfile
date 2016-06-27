@@ -68,4 +68,4 @@ end
 # CHANGED
 gem 'devise'  
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
-
+gem 'dotenv-rails', :groups => [:development, :test]
