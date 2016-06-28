@@ -1,4 +1,6 @@
-Rails.application.routes.draw do
+ Rails.application.routes.draw do
+
+  get 'users/info', to: 'users#info'
 
   devise_for :users
 

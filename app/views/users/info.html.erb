@@ -1,0 +1,9 @@
+<%= current_user.email -%>
+
+<div class="container">
+<% if @subscription.active %>
+	Subscribed
+<% else %>
+	<%= render 'form' -%>
+<% end %>
+</div>
