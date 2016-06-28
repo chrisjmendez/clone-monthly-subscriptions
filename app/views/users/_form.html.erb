@@ -1,5 +1,4 @@
 <%= form_tag "#", method: "post", id: "payment-form", class: "pure-form pure-form-aligned" do %>
-
   <span class="payment-errors"></span>
   
   <div class="pure-control-group">
@@ -24,7 +23,6 @@
   </div>
   
   <%= button_tag "Submit", data: { disable_with: "Please Wait...." },  class: 'pure-button pure-button-primary'  %>
-
 <% end %>
 
 <!-- Stripe Starts -->
@@ -72,4 +70,3 @@
   });
 </script>
 <!-- Stripe Ends -->
-  

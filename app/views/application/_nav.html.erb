@@ -13,8 +13,7 @@
 
         <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
             <a href="#" id="menuLink1" class="pure-menu-link">My Account</a>
-            <ul class="pure-menu-children">
-								
+            <ul class="pure-menu-children">				
 				<% if user_signed_in? %>				
 				<li class="pure-menu-item">					
 					<%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "pure-menu-link" %>
