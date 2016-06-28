@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510014716) do
+ActiveRecord::Schema.define(version: 20160628000330) do
 
   create_table "features", force: :cascade do |t|
     t.string   "href",       limit: 255
@@ -32,6 +32,16 @@ ActiveRecord::Schema.define(version: 20160510014716) do
     t.datetime "updated_at",                null: false
   end
 
+  create_table "subscriptions", force: :cascade do |t|
+    t.string   "stripe_user", limit: 255
+    t.boolean  "active"
+    t.integer  "user_id",     limit: 4
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
+
+  add_index "subscriptions", ["user_id"], name: "index_subscriptions_on_user_id", using: :btree
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "",    null: false
     t.string   "encrypted_password",     limit: 255, default: "",    null: false
@@ -51,4 +61,5 @@ ActiveRecord::Schema.define(version: 20160510014716) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  add_foreign_key "subscriptions", "users"
 end
