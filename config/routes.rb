@@ -1,6 +1,7 @@
  Rails.application.routes.draw do
 
   get 'users/info', to: 'users#info'
+  post 'users/charge', to: 'users#charge'
 
   devise_for :users
 
