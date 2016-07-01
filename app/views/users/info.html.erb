@@ -1,9 +1,16 @@
 <%= current_user.email -%>
-
+	
 <div class="container">
+	Account for <%= current_user.email %>
+	
+	<%# simple_format @subscription.to_yaml %>
+	
 <% if @subscription.active %>
-	Subscribed
+	Current plan renews at: <%= Time.at(@stripe_subscription["current_period_end"]).strftime("%D") %>
+	<%= link_to "Cancel subscription", users_cancel_subscription_path %>
+
 <% else %>
 	<%= render 'form' -%>
+
 <% end %>
 </div>

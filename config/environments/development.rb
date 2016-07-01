@@ -34,7 +34,9 @@ Rails.application.configure do
   config.assets.debug = true
   
   #CHANGED
-  config.log_level = :debug
+  #config.log_level = :debug
+  #config.log_level = :info
+  config.log_level = :warn
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
   # yet still be able to expire them through the digest params.
