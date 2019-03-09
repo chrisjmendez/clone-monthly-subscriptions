@@ -3,12 +3,30 @@
 [Installing Ruby on Rails on OS X](http://www.chrisjmendez.com/2016/05/06/installing-ruby-on-rails-on-osx-using-rbenv/).
 
 
-
 ---
 
 
 
 # Getting Started
+
+
+## Install Libraries
+
+```
+brew install mysql
+```
+
+```
+brew install mysql@56
+```
+
+
+```
+bundle install
+```
+
+---
+
 
 
 ## Create a New App

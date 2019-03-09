@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use mysql as the database for Active Record
-gem 'mysql2', '>= 0.3.13', '< 0.5'
+gem 'mysql2', '>= 0.4.4', '< 0.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -41,12 +40,10 @@ group :development, :test do
   gem 'rb-fsevent'
   gem 'guard-concat'
   gem 'guard-uglify'
-
   
   # I prefer rerun over livereload
   # gem 'guard-livereload', '~> 2.5', require: false
   gem 'rerun'
-
 
   # Populate your dev database with fake data
   # Source:  http://railscasts.com/episodes/126-populating-a-database
@@ -54,7 +51,6 @@ group :development, :test do
   # Execute: rake db:populate
   gem 'populator'
   gem 'faker'
-  
 end
 
 group :development do
